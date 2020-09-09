@@ -1,0 +1,208 @@
+:root{
+  --red: #e50914;
+  --black: #202020;
+  --gray: #aaaaaa;
+  --white: #e5e5e5;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100vw;
+
+  background: var(--black);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* HEADER E MENU SUPERIOR */
+header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 68px;
+  padding: 0 4%;
+}
+
+header .logo{
+  font-family: 'Arial Black';
+  color: var(--red);
+  margin-right: 50px;
+}
+
+header .menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .menu nav{
+ display: flex;
+ justify-content: start;
+ width: 100%;
+}
+
+header .menu nav a{
+  margin-right: 25px;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  transition: color .4s;
+}
+
+header .menu nav a:hover{
+  color: var(--gray);
+}
+
+header .menu .user{
+  height: 30px;
+  width: 30px;
+  background: var(--red);
+  border-radius: 5px;
+}
+
+/* DESTAQUE */
+.spotlight{
+  font-size: 16px;
+  background: 
+    linear-gradient( rgba(20,20,20,0.30)90%, var(--black)100%), 
+    linear-gradient(90deg, rgba(20,20,20,.90)30%, rgba(20,20,20,0.30)60%, rgba(20,20,20,0.10)90%),
+    url('/img/cover.jpg');
+  background-size: cover;
+  height: 56.25vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.spotlight .container{
+  padding: 0 4%;
+  width: 50%;
+}
+
+.spotlight .title{
+  font-size: 40px;
+  width: 90%;
+}
+
+.spotlight .description{
+  margin: 2% 0 4% 0;
+  width: 80%;
+}
+
+.spotlight .button:first-child{
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 5px;
+
+  padding: 15px 30px;
+  margin-right: 15px;
+
+  color: var(--black);
+  font-weight: bold;
+  font-size: 16px;
+  transition: background .5s;
+}
+
+.spotlight .button:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.spotlight .button:last-child{
+  background-color: rgba(120, 120, 120, 0.6);
+  border: none;
+  border-radius: 5px;
+
+  padding: 15px 30px;
+  margin-right: 15px;
+
+  color: var(--white);
+  font-weight: bold;
+  font-size: 16px;
+
+  transition: background .5s;
+}
+
+.spotlight .button:last-child:hover{
+  cursor: pointer;
+  background-color: rgba(120, 120, 120, 0.3);
+}
+
+.carousel{
+  margin-top: -8%;
+}
+
+.carousel h2{
+  font-size: 28px;
+  margin: 0 0 2% 4%;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 800px){
+  header .container .menu{
+    justify-content: flex-end;
+    padding-right: 2%;
+  }
+  header .container .menu nav{
+    display: none;
+  }
+  .spotlight .container{
+    width: 100%;
+  }
+  .spotlight .title{
+    width: 60%;
+    font-size: 36px;
+    margin-top: 10%;
+  }
+  .spotlight .description{
+    width: 40%;
+  }
+  .buttons{
+    width: 50%;
+    margin-bottom: 10%;
+  }
+  .button{
+    width: 80%;
+  }
+  .button:last-child{
+    margin-top: 2%;
+  }
+
+  .carousel{
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .spotlight .container{
+    width: 100%;
+  }
+  .spotlight .title{
+    width: 80%;
+    font-size: 28px;
+    margin-top: 25%;
+  
+  }
+  .spotlight .description{
+    width:80%;
+  }
+  .buttons{
+    width: 100%;
+  }
+  .carousel{
+    margin-top: 15%;
+  }
+}
